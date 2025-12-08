@@ -482,7 +482,7 @@ EtatAvion etat = a->obtenirEtat();
          avions.end()
      );
             
-   // dessiner legende
+   /* dessiner legende
    dessinerLegende(fenetre, police);
      
             // dessiner statistiques
@@ -490,7 +490,7 @@ EtatAvion etat = a->obtenirEtat();
      
             // dessiner controles
      dessinerControles(fenetre, police);
-
+    */
          fenetre.display();
    }
         
