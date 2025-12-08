@@ -330,16 +330,16 @@ float echelleX = 800.0f / tailleTexture.x;
        
  // dessiner DEUX pistes VERTICALES paralleles
   // Piste GAUCHE (atterrissage) - x=350 verticale
-    RectangleShape pisteGauche(Vector2f(30, 600));  // largeur 30, hauteur 600 (verticale)
-    pisteGauche.setPosition(Vector2f(335, 0));      // x=335 pour centrer sur 350
+    RectangleShape pisteGauche(Vector2f(30, 500));  // largeur 30, hauteur 550 (verticale)
+    pisteGauche.setPosition(Vector2f(335, 50));      // x=335 pour centrer sur 350
     pisteGauche.setFillColor(pisteFermee ? Color(150, 0, 0) : Color(70, 70, 70));
     pisteGauche.setOutlineColor(Color::White);
     pisteGauche.setOutlineThickness(2);
     fenetre.draw(pisteGauche);
   
     // Piste DROITE (decollage) - x=450 verticale
- RectangleShape pisteDroite(Vector2f(30, 600));  // largeur 30, hauteur 600 (verticale)
- pisteDroite.setPosition(Vector2f(435, 0));      // x=435 pour centrer sur 450
+ RectangleShape pisteDroite(Vector2f(30, 500));  // largeur 30, hauteur 550 (verticale)
+ pisteDroite.setPosition(Vector2f(435, 50));      // x=435 pour centrer sur 450
     pisteDroite.setFillColor(pisteFermee ? Color(150, 0, 0) : Color(90, 90, 90));
     pisteDroite.setOutlineColor(Color::White);
     pisteDroite.setOutlineThickness(2);
