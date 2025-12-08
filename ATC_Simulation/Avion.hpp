@@ -66,8 +66,18 @@ private:
 
     // utilitaires
     void deplacerVers(const Position& cible, float dt);
-  void mettreAJourEtat(EtatAvion nouvelEtat);
+    void mettreAJourEtat(EtatAvion nouvelEtat);
     bool aCibleAtteinte(const Position& cible, float seuil = 5.0f) const;
+
+	// systeme de waypoints 
+	void ajouterWaypoint(const Position& waypoint);
+    void ajouterTrajectoire(const Position& depart, const Position& arrivee);
+    void mettreAJourWaypoints(float dt);
+    void viderWaypoints();
+
+    // file de waypoints
+	queue<Position> waypoints_;
+	mutable mutex mutexWaypoints_;
     
     // gestion carburant
     void mettreAJourCarburant(float dt);
@@ -81,7 +91,7 @@ private:
     mutable mutex mutexPosition_;
     Position position_;
     Position positionCible_;
-  mutable mutex mutexRotation_;
+    mutable mutex mutexRotation_;
     float angleRotation_;
     
     float vitesse_;
@@ -90,7 +100,7 @@ private:
     atomic<EtatAvion> etat_;
     atomic<bool> actif_;
     atomic<bool> enCours_;
- atomic<float> carburant_;
+    atomic<float> carburant_;
     bool aDemandePiste_;
     
     int parkingAssigne_;
