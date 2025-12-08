@@ -1,0 +1,61 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# debug information files
+*.dwo
+
+# Dossier Visual Studio
+.vs/
+
+
+# Fichiers de configuration VS
+*.user
+*.suo
+
+# Dossiers de build
+build/
+out/
+
+# Fichiers CMake g�n�r�s
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+/SFML_examples/.vs
+/SFML_examples/.vs
