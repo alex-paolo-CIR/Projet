@@ -1,0 +1,955 @@
+{"horodatage":"2025-12-01 09:47:53.442","niveau":"INFO","composant":"TourControle","message":"systeme tour controle initialise avec 5 parkings"}
+{"horodatage":"2025-12-01 09:47:53.444","niveau":"INFO","composant":"Main","message":"scenario charge lourde 3 avions"}
+{"horodatage":"2025-12-01 09:47:53.444","niveau":"INFO","composant":"Avion","message":"avion 1 cree position (350, -50) carburant 100"}
+{"horodatage":"2025-12-01 09:47:53.444","niveau":"INFO","composant":"Avion","message":"avion 1 thread demarre"}
+{"horodatage":"2025-12-01 09:47:53.445","niveau":"INFO","composant":"Main","message":"charge lourde avion 1 y -50"}
+{"horodatage":"2025-12-01 09:47:53.448","niveau":"INFO","composant":"Avion","message":"avion 2 cree position (400, -200) carburant 100"}
+{"horodatage":"2025-12-01 09:47:53.448","niveau":"INFO","composant":"Avion","message":"avion 2 thread demarre"}
+{"horodatage":"2025-12-01 09:47:53.448","niveau":"INFO","composant":"Main","message":"charge lourde avion 2 y -200"}
+{"horodatage":"2025-12-01 09:47:53.449","niveau":"INFO","composant":"Avion","message":"avion 3 cree position (450, -350) carburant 100"}
+{"horodatage":"2025-12-01 09:47:53.449","niveau":"INFO","composant":"Avion","message":"avion 3 thread demarre"}
+{"horodatage":"2025-12-01 09:47:53.449","niveau":"INFO","composant":"Main","message":"charge lourde avion 3 y -350"}
+{"horodatage":"2025-12-01 09:47:53.449","niveau":"INFO","composant":"Avion","message":"avion 4 cree position (350, -500) carburant 100"}
+{"horodatage":"2025-12-01 09:47:53.450","niveau":"INFO","composant":"Avion","message":"avion 4 thread demarre"}
+{"horodatage":"2025-12-01 09:47:53.450","niveau":"INFO","composant":"Main","message":"charge lourde avion 4 y -500"}
+{"horodatage":"2025-12-01 09:47:53.450","niveau":"INFO","composant":"Avion","message":"avion 5 cree position (400, -650) carburant 100"}
+{"horodatage":"2025-12-01 09:47:53.450","niveau":"INFO","composant":"Avion","message":"avion 5 thread demarre"}
+{"horodatage":"2025-12-01 09:47:53.450","niveau":"INFO","composant":"Main","message":"charge lourde avion 5 y -650"}
+{"horodatage":"2025-12-01 09:47:53.451","niveau":"INFO","composant":"Main","message":"simulation demarree 3 avions espaces"}
+{"horodatage":"2025-12-01 09:47:55.573","niveau":"INFO","composant":"TourControle","message":"avion 1 ajout file attente piste"}
+{"horodatage":"2025-12-01 09:47:55.573","niveau":"INFO","composant":"TourControle","message":"avion 1 piste accordee"}
+{"horodatage":"2025-12-01 09:47:55.574","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat APPROCHE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-01 09:47:58.104","niveau":"INFO","composant":"TourControle","message":"avion 1 assigne parking 0"}
+{"horodatage":"2025-12-01 09:47:58.104","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTERRISSAGE vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-01 09:47:58.693","niveau":"INFO","composant":"TourControle","message":"avion 2 ajout file attente piste"}
+{"horodatage":"2025-12-01 09:47:58.693","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-01 09:48:00.581","niveau":"INFO","composant":"TourControle","message":"avion 1 libere piste"}
+{"horodatage":"2025-12-01 09:48:00.581","niveau":"INFO","composant":"TourControle","message":"piste libre avion suivant 2 peut redemander"}
+{"horodatage":"2025-12-01 09:48:01.535","niveau":"INFO","composant":"TourControle","message":"avion 2 piste accordee"}
+{"horodatage":"2025-12-01 09:48:01.536","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-01 09:48:01.655","niveau":"INFO","composant":"TourControle","message":"avion 3 ajout file attente piste"}
+{"horodatage":"2025-12-01 09:48:01.655","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-01 09:48:02.575","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-01 09:48:02.576","niveau":"INFO","composant":"Avion","message":"avion 1 arrive parking ravitaillement carburant 96.5106"}
+{"horodatage":"2025-12-01 09:48:03.349","niveau":"INFO","composant":"TourControle","message":"avion 2 assigne parking 1"}
+{"horodatage":"2025-12-01 09:48:03.350","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTERRISSAGE vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-01 09:48:04.520","niveau":"INFO","composant":"TourControle","message":"avion 2 libere piste"}
+{"horodatage":"2025-12-01 09:48:04.520","niveau":"INFO","composant":"TourControle","message":"piste libre avion suivant 3 peut redemander"}
+{"horodatage":"2025-12-01 09:48:05.648","niveau":"INFO","composant":"TourControle","message":"avion 4 ajout file attente piste"}
+{"horodatage":"2025-12-01 09:48:05.648","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-01 09:48:05.700","niveau":"INFO","composant":"TourControle","message":"avion 3 piste accordee"}
+{"horodatage":"2025-12-01 09:48:05.700","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-01 09:48:06.206","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-01 09:48:06.207","niveau":"INFO","composant":"Avion","message":"avion 2 arrive parking ravitaillement carburant 94.7659"}
+{"horodatage":"2025-12-03 17:05:29.971","niveau":"INFO","composant":"Tour Controle","message":"systeme bi-piste initialise : piste gauche (atterrissage) + piste droite (decollage) avec 5 parkings"}
+{"horodatage":"2025-12-03 17:05:29.972","niveau":"INFO","composant":"Main","message":"scenario charge lourde 3 avions"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 1 cree position (350, -50) carburant 100"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 1 thread demarre"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"charge lourde avion 1 y -50"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 2 cree position (400, -200) carburant 100"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 2 thread demarre"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"charge lourde avion 2 y -200"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 3 cree position (450, -350) carburant 100"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 3 thread demarre"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"charge lourde avion 3 y -350"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 4 cree position (350, -500) carburant 100"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 4 thread demarre"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"charge lourde avion 4 y -500"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 5 cree position (400, -650) carburant 100"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Avion","message":"avion 5 thread demarre"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"charge lourde avion 5 y -650"}
+{"horodatage":"2025-12-03 17:05:29.973","niveau":"INFO","composant":"Main","message":"simulation demarree 3 avions espaces"}
+{"horodatage":"2025-12-03 17:05:32.022","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:32.022","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:32.022","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat APPROCHE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:05:34.277","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:34.277","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:05:34.642","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:05:34.642","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 2"}
+{"horodatage":"2025-12-03 17:05:34.642","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:34.658","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:34.658","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:34.658","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:34.658","niveau":"INFO","composant":"Avion","message":"avion 1 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:05:36.292","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:36.292","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:05:36.413","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:36.413","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:05:36.497","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:36.497","niveau":"INFO","composant":"Tour Controle","message":"avion 1 assigne parking 0"}
+{"horodatage":"2025-12-03 17:05:36.497","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:05:38.347","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:05:38.347","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 3"}
+{"horodatage":"2025-12-03 17:05:38.347","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:38.364","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:38.364","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:38.364","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:38.364","niveau":"INFO","composant":"Avion","message":"avion 2 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:05:38.433","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:38.433","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:05:39.458","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:05:39.458","niveau":"INFO","composant":"Avion","message":"avion 1 arrive parking ravitaillement carburant 95.4862"}
+{"horodatage":"2025-12-03 17:05:40.046","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:40.046","niveau":"INFO","composant":"Tour Controle","message":"avion 2 assigne parking 1"}
+{"horodatage":"2025-12-03 17:05:40.046","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:05:40.330","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:05:40.330","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:40.347","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:40.347","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:40.347","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:40.347","niveau":"INFO","composant":"Avion","message":"avion 3 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:05:40.457","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:40.457","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:40.457","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat APPROCHE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:05:41.901","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:41.901","niveau":"INFO","composant":"Tour Controle","message":"avion 3 assigne parking 2"}
+{"horodatage":"2025-12-03 17:05:41.901","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:05:42.112","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:42.112","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:05:42.146","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:05:42.146","niveau":"INFO","composant":"Avion","message":"avion 2 arrive parking ravitaillement carburant 94.2057"}
+{"horodatage":"2025-12-03 17:05:43.107","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:05:43.108","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 5"}
+{"horodatage":"2025-12-03 17:05:43.108","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:43.124","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:43.124","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:43.124","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:43.124","niveau":"INFO","composant":"Avion","message":"avion 4 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:05:43.547","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:05:43.547","niveau":"INFO","composant":"Avion","message":"avion 3 arrive parking ravitaillement carburant 93.5494"}
+{"horodatage":"2025-12-03 17:05:44.124","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:05:44.124","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:05:44.949","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:44.949","niveau":"INFO","composant":"Tour Controle","message":"avion 4 assigne parking 3"}
+{"horodatage":"2025-12-03 17:05:44.949","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:05:46.185","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:05:46.185","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:46.201","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:46.201","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:46.201","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:05:46.201","niveau":"INFO","composant":"Avion","message":"avion 5 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:05:47.019","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:05:47.019","niveau":"INFO","composant":"Avion","message":"avion 4 arrive parking ravitaillement carburant 91.9087"}
+{"horodatage":"2025-12-03 17:05:47.486","niveau":"INFO","composant":"Avion","message":"avion 1 ravitaille 100 apres 8 sec"}
+{"horodatage":"2025-12-03 17:05:47.486","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere parking 0"}
+{"horodatage":"2025-12-03 17:05:47.486","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:05:47.870","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:47.871","niveau":"INFO","composant":"Tour Controle","message":"avion 5 assigne parking 0"}
+{"horodatage":"2025-12-03 17:05:47.871","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:05:50.169","niveau":"INFO","composant":"Avion","message":"avion 2 ravitaille 100 apres 8 sec"}
+{"horodatage":"2025-12-03 17:05:50.169","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere parking 1"}
+{"horodatage":"2025-12-03 17:05:50.169","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:05:50.605","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:05:50.605","niveau":"INFO","composant":"Avion","message":"avion 5 arrive parking ravitaillement carburant 90.164"}
+{"horodatage":"2025-12-03 17:05:50.922","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:50.922","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:50.923","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:05:51.579","niveau":"INFO","composant":"Avion","message":"avion 3 ravitaille 100 apres 8 sec"}
+{"horodatage":"2025-12-03 17:05:51.579","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere parking 2"}
+{"horodatage":"2025-12-03 17:05:51.579","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:05:53.012","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:54.234","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:55.011","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:55.011","niveau":"INFO","composant":"Tour Controle","message":"piste DROITE libre, avion suivant 2"}
+{"horodatage":"2025-12-03 17:05:55.011","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:05:55.035","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:55.035","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:05:55.046","niveau":"INFO","composant":"Avion","message":"avion 4 ravitaille 100 apres 8 sec"}
+{"horodatage":"2025-12-03 17:05:55.047","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere parking 3"}
+{"horodatage":"2025-12-03 17:05:55.047","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:05:58.446","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:05:58.636","niveau":"INFO","composant":"Avion","message":"avion 5 ravitaille 100 apres 8 sec"}
+{"horodatage":"2025-12-03 17:05:58.636","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere parking 0"}
+{"horodatage":"2025-12-03 17:05:58.636","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:05:58.752","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:05:58.752","niveau":"INFO","composant":"Tour Controle","message":"piste DROITE libre, avion suivant 3"}
+{"horodatage":"2025-12-03 17:05:58.752","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:05:58.767","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:05:58.768","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:06:01.778","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:06:02.211","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:06:02.211","niveau":"INFO","composant":"Tour Controle","message":"piste DROITE libre, avion suivant 4"}
+{"horodatage":"2025-12-03 17:06:02.211","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:06:02.227","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:06:02.227","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:06:04.156","niveau":"INFO","composant":"Main","message":"arret avions"}
+{"horodatage":"2025-12-03 17:06:04.177","niveau":"INFO","composant":"Avion","message":"avion 5 thread termine"}
+{"horodatage":"2025-12-03 17:06:04.178","niveau":"INFO","composant":"Avion","message":"avion 4 thread termine"}
+{"horodatage":"2025-12-03 17:06:04.178","niveau":"INFO","composant":"Avion","message":"avion 3 thread termine"}
+{"horodatage":"2025-12-03 17:06:04.178","niveau":"INFO","composant":"Avion","message":"avion 1 thread termine"}
+{"horodatage":"2025-12-03 17:06:04.178","niveau":"INFO","composant":"Avion","message":"avion 2 thread termine"}
+{"horodatage":"2025-12-03 17:06:04.178","niveau":"INFO","composant":"Main","message":"simulation terminee"}
+{"horodatage":"2025-12-03 17:17:08.503","niveau":"INFO","composant":"Tour Controle","message":"systeme bi-piste VERTICALE initialise : piste gauche x=350 (atterrissage) + piste droite x=450 (decollage) avec 5 parkings"}
+{"horodatage":"2025-12-03 17:17:08.504","niveau":"INFO","composant":"Main","message":"scenario charge lourde 3 avions"}
+{"horodatage":"2025-12-03 17:17:08.504","niveau":"INFO","composant":"Avion","message":"avion 1 cree position (350, -50) carburant 100"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 1 thread demarre"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Main","message":"charge lourde avion 1 y -50"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 2 cree position (400, -200) carburant 100"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 2 thread demarre"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Main","message":"charge lourde avion 2 y -200"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 3 cree position (450, -350) carburant 100"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat APPROCHE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 3 thread demarre"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Main","message":"charge lourde avion 3 y -350"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 4 cree position (350, -500) carburant 100"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 4 thread demarre"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Main","message":"charge lourde avion 4 y -500"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 5 cree position (400, -650) carburant 100"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Avion","message":"avion 5 thread demarre"}
+{"horodatage":"2025-12-03 17:17:08.505","niveau":"INFO","composant":"Main","message":"charge lourde avion 5 y -650"}
+{"horodatage":"2025-12-03 17:17:08.506","niveau":"INFO","composant":"Main","message":"simulation demarree 3 avions espaces"}
+{"horodatage":"2025-12-03 17:17:11.197","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:11.197","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:17:13.550","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:13.550","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:17:13.661","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:17:13.661","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 2"}
+{"horodatage":"2025-12-03 17:17:13.661","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:13.678","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:13.678","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:13.678","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:13.678","niveau":"INFO","composant":"Avion","message":"avion 1 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:17:14.569","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:14.569","niveau":"INFO","composant":"Tour Controle","message":"avion 1 assigne parking 0"}
+{"horodatage":"2025-12-03 17:17:14.569","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:17:15.205","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:15.206","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:17:16.484","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:17:16.484","niveau":"INFO","composant":"Avion","message":"avion 1 arrive parking ravitaillement carburant 96.1905"}
+{"horodatage":"2025-12-03 17:17:16.991","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:16.991","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:17:18.931","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:18.932","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:17:19.442","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:17:19.442","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 3"}
+{"horodatage":"2025-12-03 17:17:19.442","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:19.459","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:19.459","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:19.459","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:19.459","niveau":"INFO","composant":"Avion","message":"avion 2 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:17:19.606","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:19.606","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:17:20.257","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:20.257","niveau":"INFO","composant":"Tour Controle","message":"avion 2 assigne parking 1"}
+{"horodatage":"2025-12-03 17:17:20.257","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:17:23.175","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:17:23.175","niveau":"INFO","composant":"Avion","message":"avion 2 arrive parking ravitaillement carburant 92.9972"}
+{"horodatage":"2025-12-03 17:17:23.711","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:17:23.711","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 4"}
+{"horodatage":"2025-12-03 17:17:23.711","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:23.728","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:23.728","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:23.728","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:23.728","niveau":"INFO","composant":"Avion","message":"avion 3 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:17:24.475","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:24.475","niveau":"INFO","composant":"Tour Controle","message":"avion 3 assigne parking 2"}
+{"horodatage":"2025-12-03 17:17:24.475","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:17:24.505","niveau":"INFO","composant":"Avion","message":"avion 1 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:17:24.505","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere parking 0"}
+{"horodatage":"2025-12-03 17:17:24.505","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:17:25.053","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:25.053","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:17:25.685","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:25.685","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:25.685","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:17:28.258","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:17:28.258","niveau":"INFO","composant":"Avion","message":"avion 3 arrive parking ravitaillement carburant 90.5962"}
+{"horodatage":"2025-12-03 17:17:30.052","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:17:30.052","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 5"}
+{"horodatage":"2025-12-03 17:17:30.052","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:30.902","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:30.902","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:17:30.909","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:30.909","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:30.909","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:30.909","niveau":"INFO","composant":"Avion","message":"avion 4 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:17:31.042","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:17:31.042","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:17:31.200","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.216","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.233","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.249","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.266","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.283","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.300","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.317","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.333","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.351","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.367","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.384","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.400","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.417","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.435","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.452","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.468","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.484","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.501","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.518","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.535","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.551","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.568","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.584","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.601","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.617","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.634","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.651","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.667","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.684","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.701","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.718","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.735","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.751","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.768","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.785","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:31.788","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:31.788","niveau":"INFO","composant":"Tour Controle","message":"avion 4 assigne parking 0"}
+{"horodatage":"2025-12-03 17:17:31.788","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:17:31.802","niveau":"INFO","composant":"Avion","message":"avion 2 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:17:31.802","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere parking 1"}
+{"horodatage":"2025-12-03 17:17:31.802","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:17:33.695","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:17:33.695","niveau":"INFO","composant":"Avion","message":"avion 4 arrive parking ravitaillement carburant 87.9951"}
+{"horodatage":"2025-12-03 17:17:34.055","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:34.055","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:34.055","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:17:35.762","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:17:35.762","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:36.275","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.293","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.315","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.331","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.348","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.365","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.382","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.398","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.415","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.431","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.448","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.465","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.482","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.499","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.516","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.532","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.550","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.567","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.584","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.600","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.617","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.633","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.650","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.667","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.684","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.700","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.716","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.733","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.751","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.767","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.784","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.800","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.817","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.834","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.851","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.867","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.884","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.900","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.917","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.933","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.950","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.967","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:36.984","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.001","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.017","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.034","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.051","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.068","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.084","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.102","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.118","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.135","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.152","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.169","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.186","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.202","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.220","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.236","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.253","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.271","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.288","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.305","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.321","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.338","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.356","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.373","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.391","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.407","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.424","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.441","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.457","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.474","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.490","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.508","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.525","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.541","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.558","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.575","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.592","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.609","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.626","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.643","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.659","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.677","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.694","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.711","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.728","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.745","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.762","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.779","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.796","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.812","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.829","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.846","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.863","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.880","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.897","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.913","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.930","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.947","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.963","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.980","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:37.997","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.014","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.031","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.047","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.064","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.081","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.098","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.114","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.131","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.148","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.165","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.182","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.199","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.215","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.232","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.249","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.266","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.282","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.299","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.316","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.333","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.350","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.367","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.384","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.401","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.418","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.434","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.451","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.468","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.485","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.501","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.517","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.533","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.550","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.567","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.584","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.601","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.617","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.636","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.653","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.670","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.687","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.704","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.720","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.737","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.754","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.770","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.787","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:38.803","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:38.803","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:17:38.804","niveau":"INFO","composant":"Avion","message":"avion 3 ravitaille 100 apres 10 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:17:38.804","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere parking 2"}
+{"horodatage":"2025-12-03 17:17:38.804","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:17:38.819","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:38.819","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:38.819","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:17:38.819","niveau":"INFO","composant":"Avion","message":"avion 5 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:17:39.631","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:39.631","niveau":"INFO","composant":"Tour Controle","message":"avion 5 assigne parking 1"}
+{"horodatage":"2025-12-03 17:17:39.631","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:17:41.712","niveau":"INFO","composant":"Avion","message":"avion 4 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:17:41.712","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere parking 0"}
+{"horodatage":"2025-12-03 17:17:41.712","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:17:41.954","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:41.954","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:41.954","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:17:42.585","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:17:42.585","niveau":"INFO","composant":"Avion","message":"avion 5 arrive parking ravitaillement carburant 83.7534"}
+{"horodatage":"2025-12-03 17:17:42.883","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:46.412","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:46.412","niveau":"INFO","composant":"Tour Controle","message":"piste DROITE libre, avion suivant 4"}
+{"horodatage":"2025-12-03 17:17:46.412","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:17:46.427","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:46.427","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:17:50.612","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.629","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.646","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.662","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.679","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.696","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.713","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.731","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.748","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.765","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.782","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.799","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.815","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.831","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.848","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.865","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.882","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.899","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.916","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.933","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.950","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.967","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:50.984","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.000","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.017","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.033","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.050","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.067","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.083","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.100","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.117","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.133","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.150","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.167","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.183","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.200","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.217","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.234","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.251","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.268","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.284","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.305","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.322","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.339","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.356","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.373","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.390","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.407","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.424","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.440","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.457","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.473","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.490","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.507","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.524","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.540","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.557","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.574","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.590","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.608","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.624","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:17:51.625","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:51.625","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:17:51.641","niveau":"INFO","composant":"Avion","message":"avion 5 ravitaille 100 apres 9 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:17:51.641","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere parking 1"}
+{"horodatage":"2025-12-03 17:17:51.641","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:17:53.861","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:17:53.861","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:17:53.861","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:17:58.610","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:17:58.610","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:19:13.451","niveau":"INFO","composant":"Tour Controle","message":"systeme bi-piste VERTICALE initialise : piste gauche x=350 (atterrissage) + piste droite x=450 (decollage) avec 5 parkings"}
+{"horodatage":"2025-12-03 17:19:13.454","niveau":"INFO","composant":"Main","message":"scenario charge lourde 3 avions"}
+{"horodatage":"2025-12-03 17:19:13.454","niveau":"INFO","composant":"Avion","message":"avion 1 cree position (350, -50) carburant 100"}
+{"horodatage":"2025-12-03 17:19:13.455","niveau":"INFO","composant":"Avion","message":"avion 1 thread demarre"}
+{"horodatage":"2025-12-03 17:19:13.455","niveau":"INFO","composant":"Main","message":"charge lourde avion 1 y -50"}
+{"horodatage":"2025-12-03 17:19:13.456","niveau":"INFO","composant":"Avion","message":"avion 2 cree position (400, -200) carburant 100"}
+{"horodatage":"2025-12-03 17:19:13.456","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:13.456","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:13.456","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat APPROCHE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:19:13.457","niveau":"INFO","composant":"Avion","message":"avion 2 thread demarre"}
+{"horodatage":"2025-12-03 17:19:13.457","niveau":"INFO","composant":"Main","message":"charge lourde avion 2 y -200"}
+{"horodatage":"2025-12-03 17:19:13.457","niveau":"INFO","composant":"Avion","message":"avion 3 cree position (450, -350) carburant 100"}
+{"horodatage":"2025-12-03 17:19:13.457","niveau":"INFO","composant":"Avion","message":"avion 3 thread demarre"}
+{"horodatage":"2025-12-03 17:19:13.457","niveau":"INFO","composant":"Main","message":"charge lourde avion 3 y -350"}
+{"horodatage":"2025-12-03 17:19:13.458","niveau":"INFO","composant":"Avion","message":"avion 4 cree position (350, -500) carburant 100"}
+{"horodatage":"2025-12-03 17:19:13.458","niveau":"INFO","composant":"Avion","message":"avion 4 thread demarre"}
+{"horodatage":"2025-12-03 17:19:13.459","niveau":"INFO","composant":"Main","message":"charge lourde avion 4 y -500"}
+{"horodatage":"2025-12-03 17:19:13.459","niveau":"INFO","composant":"Avion","message":"avion 5 cree position (400, -650) carburant 100"}
+{"horodatage":"2025-12-03 17:19:13.459","niveau":"INFO","composant":"Avion","message":"avion 5 thread demarre"}
+{"horodatage":"2025-12-03 17:19:13.459","niveau":"INFO","composant":"Main","message":"charge lourde avion 5 y -650"}
+{"horodatage":"2025-12-03 17:19:13.460","niveau":"INFO","composant":"Main","message":"simulation demarree 3 avions espaces"}
+{"horodatage":"2025-12-03 17:19:16.126","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:16.126","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:19:18.501","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:18.502","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:19:18.626","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:19:18.627","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 2"}
+{"horodatage":"2025-12-03 17:19:18.627","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:18.644","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:18.644","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:18.645","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:18.645","niveau":"INFO","composant":"Avion","message":"avion 1 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:19:19.534","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:19.535","niveau":"INFO","composant":"Tour Controle","message":"avion 1 assigne parking 0"}
+{"horodatage":"2025-12-03 17:19:19.536","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:19:20.197","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:20.198","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:19:21.467","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:19:21.467","niveau":"INFO","composant":"Avion","message":"avion 1 arrive parking ravitaillement carburant 96.1905"}
+{"horodatage":"2025-12-03 17:19:21.968","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:21.968","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:19:23.922","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste GAUCHE (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:23.923","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat APPROCHE vers ATTENTE"}
+{"horodatage":"2025-12-03 17:19:24.398","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:19:24.399","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 3"}
+{"horodatage":"2025-12-03 17:19:24.399","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:24.417","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:24.417","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:24.418","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:24.418","niveau":"INFO","composant":"Avion","message":"avion 2 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:19:24.576","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:24.577","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:19:25.215","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:25.215","niveau":"INFO","composant":"Tour Controle","message":"avion 2 assigne parking 1"}
+{"horodatage":"2025-12-03 17:19:25.215","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:19:28.149","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:19:28.149","niveau":"INFO","composant":"Avion","message":"avion 2 arrive parking ravitaillement carburant 92.9972"}
+{"horodatage":"2025-12-03 17:19:28.697","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:19:28.698","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 4"}
+{"horodatage":"2025-12-03 17:19:28.698","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:28.715","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:28.715","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:28.715","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:28.715","niveau":"INFO","composant":"Avion","message":"avion 3 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:19:29.466","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:29.467","niveau":"INFO","composant":"Tour Controle","message":"avion 3 assigne parking 2"}
+{"horodatage":"2025-12-03 17:19:29.467","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:19:29.497","niveau":"INFO","composant":"Avion","message":"avion 1 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:19:29.497","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere parking 0"}
+{"horodatage":"2025-12-03 17:19:29.497","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:19:30.008","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:30.008","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:19:30.675","niveau":"INFO","composant":"Tour Controle","message":"avion 1 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:30.675","niveau":"INFO","composant":"Tour Controle","message":"avion 1 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:30.676","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:19:33.236","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:19:33.237","niveau":"INFO","composant":"Avion","message":"avion 3 arrive parking ravitaillement carburant 90.5962"}
+{"horodatage":"2025-12-03 17:19:34.987","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:19:34.988","niveau":"INFO","composant":"Tour Controle","message":"piste GAUCHE libre, avion suivant 5"}
+{"horodatage":"2025-12-03 17:19:34.988","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:35.886","niveau":"INFO","composant":"Tour Controle","message":"avion 1 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:35.886","niveau":"INFO","composant":"Avion","message":"avion 1 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:19:35.900","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:35.900","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:35.901","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:35.901","niveau":"INFO","composant":"Avion","message":"avion 4 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:19:36.017","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste GAUCHE accordee (atterrissage)"}
+{"horodatage":"2025-12-03 17:19:36.018","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE vers ATTERRISSAGE"}
+{"horodatage":"2025-12-03 17:19:36.168","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.186","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.203","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.220","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.236","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.254","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.271","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.287","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.305","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.322","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.339","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.356","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.373","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.389","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.407","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.424","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.440","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.458","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.475","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.492","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.509","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.526","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.544","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.561","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.578","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.594","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.611","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.628","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.645","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.662","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.680","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.698","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.715","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.732","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.749","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.765","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.782","niveau":"INFO","composant":"Avion","message":"avion 2 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:36.793","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:36.793","niveau":"INFO","composant":"Tour Controle","message":"avion 4 assigne parking 0"}
+{"horodatage":"2025-12-03 17:19:36.793","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:19:36.800","niveau":"INFO","composant":"Avion","message":"avion 2 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:19:36.800","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere parking 1"}
+{"horodatage":"2025-12-03 17:19:36.800","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:19:38.705","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:19:38.706","niveau":"INFO","composant":"Avion","message":"avion 4 arrive parking ravitaillement carburant 87.9711"}
+{"horodatage":"2025-12-03 17:19:39.037","niveau":"INFO","composant":"Tour Controle","message":"avion 2 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:39.038","niveau":"INFO","composant":"Tour Controle","message":"avion 2 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:39.038","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:19:40.781","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste GAUCHE"}
+{"horodatage":"2025-12-03 17:19:40.781","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTERRISSAGE vers ATTENTE_CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:41.256","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.272","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.289","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.306","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.323","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.340","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.357","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.374","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.391","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.408","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.425","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.442","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.460","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.477","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.494","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.511","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.528","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.545","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.563","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.580","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.597","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.614","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.630","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.648","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.665","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.682","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.699","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.716","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.733","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.750","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.767","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.784","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.802","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.819","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.836","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.853","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.870","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.887","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.904","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.921","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.939","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.956","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.973","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:41.990","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.007","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.024","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.040","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.057","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.074","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.091","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.108","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.126","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.143","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.160","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.177","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.194","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.211","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.228","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.245","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.262","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.279","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.296","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.313","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.330","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.347","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.378","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.395","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.412","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.429","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.448","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.465","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.481","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.498","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.516","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.533","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.550","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.582","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.599","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.616","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.632","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.650","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.667","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.684","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.701","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.718","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.735","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.752","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.769","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.786","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.803","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.820","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.837","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.854","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.871","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.888","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.904","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.922","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.939","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.957","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.974","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:42.991","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.008","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.026","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.049","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.066","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.089","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.106","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.123","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.140","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.157","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.174","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.191","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.208","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.224","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.241","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.259","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.276","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.294","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.310","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.327","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.344","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.360","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.377","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.395","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.413","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.429","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.457","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.474","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.491","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.508","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.525","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.541","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.558","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.575","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.592","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.609","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.625","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.643","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.659","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.676","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.694","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.711","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.728","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.745","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.762","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.778","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.795","niveau":"INFO","composant":"Avion","message":"avion 3 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:43.808","niveau":"INFO","composant":"Tour Controle","message":"avion 2 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:43.808","niveau":"INFO","composant":"Avion","message":"avion 2 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:19:43.812","niveau":"INFO","composant":"Avion","message":"avion 3 ravitaille 100 apres 10 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:19:43.812","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere parking 2"}
+{"horodatage":"2025-12-03 17:19:43.812","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:19:43.813","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:43.813","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:43.813","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ATTENTE_CROISEMENT vers CROISEMENT"}
+{"horodatage":"2025-12-03 17:19:43.813","niveau":"INFO","composant":"Avion","message":"avion 5 traverse vers parking (piste droite libre)"}
+{"horodatage":"2025-12-03 17:19:44.631","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:44.632","niveau":"INFO","composant":"Tour Controle","message":"avion 5 assigne parking 1"}
+{"horodatage":"2025-12-03 17:19:44.632","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat CROISEMENT vers ROULAGE_ENTREE"}
+{"horodatage":"2025-12-03 17:19:46.732","niveau":"INFO","composant":"Avion","message":"avion 4 ravitaille 100 apres 8 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:19:46.732","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere parking 0"}
+{"horodatage":"2025-12-03 17:19:46.732","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:19:46.974","niveau":"INFO","composant":"Tour Controle","message":"avion 3 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:46.974","niveau":"INFO","composant":"Tour Controle","message":"avion 3 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:46.974","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:19:47.580","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ROULAGE_ENTREE vers STATIONNE"}
+{"horodatage":"2025-12-03 17:19:47.581","niveau":"INFO","composant":"Avion","message":"avion 5 arrive parking ravitaillement carburant 83.7614"}
+{"horodatage":"2025-12-03 17:19:47.919","niveau":"INFO","composant":"Tour Controle","message":"avion 4 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:51.427","niveau":"INFO","composant":"Tour Controle","message":"avion 3 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:51.427","niveau":"INFO","composant":"Tour Controle","message":"piste DROITE libre, avion suivant 4"}
+{"horodatage":"2025-12-03 17:19:51.427","niveau":"INFO","composant":"Avion","message":"avion 3 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:19:51.434","niveau":"INFO","composant":"Tour Controle","message":"avion 4 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:51.434","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:19:55.614","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.630","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.647","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.664","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.681","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.698","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.715","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.732","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.749","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.765","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.784","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.801","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.818","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.836","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.853","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.870","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.887","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.903","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.920","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.937","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.953","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:55.970","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.000","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.018","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.035","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.052","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.069","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.086","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.103","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.120","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.137","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.153","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.170","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.187","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.204","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.221","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.238","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.255","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.272","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.289","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.306","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.322","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.339","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.356","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.373","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.390","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.407","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.424","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.441","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.458","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.475","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.493","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.509","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.526","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.543","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.561","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.578","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.595","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.612","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.630","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.646","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.663","niveau":"INFO","composant":"Avion","message":"avion 5 pret a partir mais attend fin decollage autre avion"}
+{"horodatage":"2025-12-03 17:19:56.666","niveau":"INFO","composant":"Tour Controle","message":"avion 4 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:19:56.666","niveau":"INFO","composant":"Avion","message":"avion 4 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:19:56.680","niveau":"INFO","composant":"Avion","message":"avion 5 ravitaille 100 apres 9 sec - pret au depart"}
+{"horodatage":"2025-12-03 17:19:56.680","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere parking 1"}
+{"horodatage":"2025-12-03 17:19:56.680","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat STATIONNE vers ROULAGE_SORTIE"}
+{"horodatage":"2025-12-03 17:19:58.914","niveau":"INFO","composant":"Tour Controle","message":"avion 5 demande piste DROITE (decollage/croisement)"}
+{"horodatage":"2025-12-03 17:19:58.914","niveau":"INFO","composant":"Tour Controle","message":"avion 5 piste DROITE accordee"}
+{"horodatage":"2025-12-03 17:19:58.915","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat ROULAGE_SORTIE vers DECOLLAGE"}
+{"horodatage":"2025-12-03 17:20:03.661","niveau":"INFO","composant":"Tour Controle","message":"avion 5 libere piste DROITE"}
+{"horodatage":"2025-12-03 17:20:03.662","niveau":"INFO","composant":"Avion","message":"avion 5 changement etat DECOLLAGE vers DEPART"}
+{"horodatage":"2025-12-03 17:20:11.364","niveau":"INFO","composant":"Main","message":"arret avions"}
+{"horodatage":"2025-12-03 17:20:11.375","niveau":"INFO","composant":"Avion","message":"avion 4 thread termine"}
+{"horodatage":"2025-12-03 17:20:11.376","niveau":"INFO","composant":"Avion","message":"avion 2 thread termine"}
+{"horodatage":"2025-12-03 17:20:11.376","niveau":"INFO","composant":"Avion","message":"avion 5 thread termine"}
+{"horodatage":"2025-12-03 17:20:11.376","niveau":"INFO","composant":"Avion","message":"avion 1 thread termine"}
+{"horodatage":"2025-12-03 17:20:11.391","niveau":"INFO","composant":"Avion","message":"avion 3 thread termine"}
+{"horodatage":"2025-12-03 17:20:11.392","niveau":"INFO","composant":"Main","message":"simulation terminee"}

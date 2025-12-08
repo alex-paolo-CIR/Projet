@@ -15,8 +15,9 @@ find_package(SFML 3 COMPONENTS Window Graphics System REQUIRED)
 link_libraries(SFML::Graphics SFML::Window SFML::System)
 
 
+
 add_executable (ATC_Simulation 
-    "ATC_Simulation/principal.cpp" 
+    "ATC_Simulation/main.cpp" 
     "ATC_Simulation/TourControle.cpp" 
     "ATC_Simulation/Avion.cpp"
 )

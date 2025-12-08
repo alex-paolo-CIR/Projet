@@ -16,48 +16,62 @@ struct DemandePiste {
     chrono::steady_clock::time_point momentDemande;
     
     DemandePiste(int id, bool urgence)
-        : idAvion(id)
-     , estUrgence(urgence)
+   : idAvion(id)
+        , estUrgence(urgence)
         , momentDemande(chrono::steady_clock::now())
-  {}
+    {}
     
     // comparaison pour file priorite
     bool operator<(const DemandePiste& autre) const {
-      // urgences en premier
+        // urgences en premier
         if (estUrgence != autre.estUrgence) {
-          return !estUrgence;
- }
-   // sinon fifo
-   return momentDemande > autre.momentDemande;
+            return !estUrgence;
+        }
+      // sinon fifo
+     return momentDemande > autre.momentDemande;
     }
 };
 
-// controle aerien
+// controle aerien avec deux pistes
 class TourControle {
 public:
     TourControle(int nombrePlacesParking = 5);
     ~TourControle() = default;
 
-    // gestion piste avec priorite
- bool demanderPiste(int idAvion, bool estUrgence = false);
-    void libererPiste(int idAvion);
-    bool pisteOccupee() const;
+    // gestion piste gauche atterrissage avec priorite
+    bool demanderPisteGauche(int idAvion, bool estUrgence = false);
+    void libererPisteGauche(int idAvion);
+    bool pisteGaucheOccupee() const;
     
-    // fermeture ouverture piste
-    void fermerPiste();
-    void ouvrirPiste();
-    bool pisteFermee() const;
+    // gestion piste droite decollage
+    bool demanderPisteDroite(int idAvion);
+    void libererPisteDroite(int idAvion);
+    bool pisteDroiteOccupee() const;
+    
+ // fermeture ouverture pistes
+    void fermerPistes();
+    void ouvrirPistes();
+    bool pistesFermees() const;
 
     // gestion parkings
     int assignerParking(int idAvion);
     void libererParking(int idAvion, int idParking);
     Position obtenirPositionParking(int idParking) const;
     
-    // positions piste
-    Position obtenirPositionPiste() const { return positionPiste_; }
-    Position obtenirSeuilPiste() const { return seuilPiste_; }
+    // positions piste gauche atterrissage
+    Position obtenirPositionPisteGauche() const { return positionPisteGauche_; }
+    Position obtenirSeuilPisteGauche() const { return seuilPisteGauche_; }
+    Position obtenirFinPisteGauche() const { return finPisteGauche_; }
     Position obtenirPointApproche() const { return pointApproche_; }
+  
+    // positions piste droite decollage
+    Position obtenirPositionPisteDroite() const { return positionPisteDroite_; }
+    Position obtenirSeuilPisteDroite() const { return seuilPisteDroite_; }
+    Position obtenirFinPisteDroite() const { return finPisteDroite_; }
     Position obtenirPointDepart() const { return pointDepart_; }
+  
+    // point croisement entre les deux pistes
+    Position obtenirPointCroisement() const { return pointCroisement_; }
 
     // statistiques
     int obtenirTotalAtterrissages() const { return totalAtterrissages_.load(); }
@@ -66,22 +80,42 @@ public:
     int obtenirAvionsEnAttente() const;
 
 private:
-    bool essayerAccorderPiste(int idAvion);
+    bool essayerAccorderPisteGauche(int idAvion);
+    bool essayerAccorderPisteDroite(int idAvion);
   
-    mutable mutex mutexPiste_;
-    atomic<bool> pisteOccupee_;
-    atomic<bool> pisteFermee_;
-    int pisteOccupeePar_;
-    priority_queue<DemandePiste> fileAttentePiste_;
+    // gestion piste gauche atterrissage
+ mutable mutex mutexPisteGauche_;
+    atomic<bool> pisteGaucheOccupee_;
+    int pisteGaucheOccupeePar_;
+    priority_queue<DemandePiste> fileAttentePisteGauche_;
+    
+    // gestion piste droite decollage
+    mutable mutex mutexPisteDroite_;
+    atomic<bool> pisteDroiteOccupee_;
+    int pisteDroiteOccupeePar_;
+    queue<int> fileAttentePisteDroite_;
+    
+    atomic<bool> pistesFermees_;
 
+    // gestion parkings
     mutable mutex mutexParking_;
     vector<bool> parkingOccupe_;
     vector<Position> positionsParking_;
     
-    Position positionPiste_;
-    Position seuilPiste_;
+    // positions piste gauche atterrissage
+    Position positionPisteGauche_;
+    Position seuilPisteGauche_;
+    Position finPisteGauche_;
     Position pointApproche_;
+    
+    // positions piste droite decollage
+    Position positionPisteDroite_;
+    Position seuilPisteDroite_;
+    Position finPisteDroite_;
     Position pointDepart_;
+    
+    // point critique croisement
+    Position pointCroisement_;
 
     atomic<int> totalAtterrissages_;
     atomic<int> totalDecollages_;

@@ -54,6 +54,8 @@ private:
     void phaseApproche();
     void phaseAttente();
     void phaseAtterrissage();
+    void phaseAttenteCroisement();  // nouvelle phase : attend de traverser
+    void phaseCroisement();          // nouvelle phase : traverse la piste droite
     void phaseRoulageEntree();
     void phaseStationnement();
     void phaseRoulageSortie();
@@ -83,6 +85,8 @@ private:
     float angleRotation_;
     
     float vitesse_;
+    float vitesseBase_;
+    float angleAttente_;
     atomic<EtatAvion> etat_;
     atomic<bool> actif_;
     atomic<bool> enCours_;
@@ -91,7 +95,7 @@ private:
     
     int parkingAssigne_;
     unique_ptr<thread> thread_;
-    
+  
     // constantes simulation
     static const float TEMPS_TRAME;
     static const float TEMPS_PARKING;
