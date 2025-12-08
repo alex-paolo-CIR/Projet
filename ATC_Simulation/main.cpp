@@ -381,14 +381,14 @@ float echelleX = 800.0f / tailleTexture.x;
 
          // dessiner parkings
             for (int i = 0; i < 5; ++i) {
-    Position posParking = tour.obtenirPositionParking(i);
-   CircleShape placeParking(15);
-                placeParking.setPosition(Vector2f(posParking.x - 15, posParking.y - 15));
-placeParking.setFillColor(Color(60, 60, 60));
-        placeParking.setOutlineColor(Color(150, 150, 150));
-          placeParking.setOutlineThickness(2);
-       fenetre.draw(placeParking);
-        }
+            Position posParking = tour.obtenirPositionParking(i);
+            CircleShape placeParking(15);
+            placeParking.setPosition(Vector2f(posParking.x - 15, posParking.y - 15));
+            placeParking.setFillColor(Color(60, 60, 60));
+            placeParking.setOutlineColor(Color(150, 150, 150));
+            placeParking.setOutlineThickness(2);
+            fenetre.draw(placeParking);
+            }
       
       // dessiner avions
             int avionsActifs = 0;

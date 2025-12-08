@@ -31,11 +31,12 @@ TourControle::TourControle(int nombrePlacesParking)
 
     // init parkings cote droit
     parkingOccupe_.resize(nombrePlacesParking, false);
-  float departX = 550.0f;    // a droite des pistes
-    float espacement = 80.0f;
+  float departX = 650.0f;    // a droite des pistes
+  float departY = 150.0f;
+  float espacement = 80.0f;
     
     for (int i = 0; i < nombrePlacesParking; ++i) {
-        positionsParking_.push_back(Position(departX + i * 100.0f, 500.0f));  // alignes en bas
+        positionsParking_.push_back(Position(departX, departY + i * espacement));  // alignes en bas
     }
 
     Journaliseur::obtenirInstance().journaliser("Tour Controle", 
