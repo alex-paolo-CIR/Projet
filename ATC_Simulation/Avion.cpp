@@ -198,118 +198,176 @@ void Avion::phaseApproche() {
         lock_guard<mutex> verrou(mutexWaypoints_);
         if (waypoints_.empty()) {
             doitCreerTrajectoire = true;
-     }
+        }
     }
 
     if (doitCreerTrajectoire) {
         Position depart = obtenirPosition();
-        Position arrivee = tour_->obtenirPointApproche();
-    ajouterTrajectoire(depart, arrivee);
+        Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+        
+        // creer une approche naturelle en 2 temps:
+        // 1. aller vers un point d'alignement (meme x que la piste, y au dessus)
+        // 2. descendre droit vers le seuil
+        
+        Position pointAlignement(seuilPiste.x, depart.y);  // s'aligner en x avec la piste
+        
+        // si on n'est pas deja aligne, ajouter le point d'alignement
+        if (abs(depart.x - seuilPiste.x) > 20.0f) {
+            ajouterWaypoint(pointAlignement);
+        }
+        
+        // ajouter le seuil de piste
+        ajouterWaypoint(seuilPiste);
 
         stringstream ss;
-        ss << "avion " << id_ << " approche rectiligne de ("
-       << depart.x << "," << depart.y << ") vers ("
-            << arrivee.x << "," << arrivee.y << ")";
+        ss << "avion " << id_ << " approche alignee vers piste x=" << seuilPiste.x;
         Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
     }
 
     mettreAJourWaypoints(TEMPS_TRAME);
 
-    Position pointApproche = tour_->obtenirPointApproche();
-    if (aCibleAtteinte(pointApproche, 10.0f)) {
+    Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+    if (aCibleAtteinte(seuilPiste, 15.0f)) {
         viderWaypoints();
 
-  bool estUrgence = carburant_.load() < ConfigCarburant::SEUIL_URGENCE_CARBURANT;
+        bool estUrgence = carburant_.load() < ConfigCarburant::SEUIL_URGENCE_CARBURANT;
         if (tour_->demanderPisteGauche(id_, estUrgence)) {
-      mettreAJourEtat(EtatAvion::ATTERRISSAGE);
+            mettreAJourEtat(EtatAvion::ATTERRISSAGE);
             aDemandePiste_ = true;
 
+            // deja aligne, aller droit vers fin de piste
             Position posActuelle = obtenirPosition();
-        ajouterTrajectoire(posActuelle, tour_->obtenirSeuilPisteGauche());
+            Position finPiste = tour_->obtenirFinPisteGauche();
+            ajouterWaypoint(finPiste);
         }
         else {
-    mettreAJourEtat(EtatAvion::ATTENTE);
- aDemandePiste_ = false;
+            mettreAJourEtat(EtatAvion::ATTENTE);
+            aDemandePiste_ = false;
         }
-  }
+    }
 }
 
 void Avion::phaseAttente() {
     if (carburant_.load() < ConfigCarburant::SEUIL_URGENCE_CARBURANT && 
         etat_.load() != EtatAvion::URGENCE) {
         mettreAJourEtat(EtatAvion::URGENCE);
-    aDemandePiste_ = false;
-return;
+        aDemandePiste_ = false;
+        return;
     }
     
-    Position centreOvale(200.0f, 200.0f);
-float rayonX = 100.0f;
-    float rayonY = 120.0f;
-
-    angleAttente_ += 3.0f;
-    if (angleAttente_ >= 360.0f) {
-  angleAttente_ -= 360.0f;
-    }
-    
-    float angleRad = angleAttente_ * 3.14159f / 180.0f;
-    Position nouvellePos;
-    nouvellePos.x = centreOvale.x + cos(angleRad) * rayonX;
-    nouvellePos.y = centreOvale.y + sin(angleRad) * rayonY;
-    
-    positionCible_ = nouvellePos;
-    deplacerVers(positionCible_, TEMPS_TRAME);
-
-    if (angleAttente_ < 5.0f) {
-        bool estUrgence = carburant_.load() < ConfigCarburant::SEUIL_URGENCE_CARBURANT;
-        
-        if (tour_->demanderPisteGauche(id_, estUrgence)) {
+    // demander autorisation a chaque frame
+    bool estUrgence = carburant_.load() < ConfigCarburant::SEUIL_URGENCE_CARBURANT;
+    if (tour_->demanderPisteGauche(id_, estUrgence)) {
+        // autorisation recue, aller atterrir immediatement
+        viderWaypoints();
         mettreAJourEtat(EtatAvion::ATTERRISSAGE);
-            aDemandePiste_ = true;
-    vitesse_ = vitesseBase_ * 1.2f;
-      
-         Position posActuelle = obtenirPosition();
- ajouterTrajectoire(posActuelle, tour_->obtenirSeuilPisteGauche());
-       
-         stringstream ss;
-            ss << "avion " << id_ << " quitte attente, atterrissage autorise";
- Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
-        }
-  }
-}
-void Avion::phaseUrgence() {
-    Position centreOvale(200.0f, 200.0f);
- float rayonX = 80.0f;  // plus serre
-    float rayonY = 100.0f;
-    
-    // tourner plus vite en urgence
-    angleAttente_ += 4.0f;
-    if (angleAttente_ >= 360.0f) {
-        angleAttente_ -= 360.0f;
+        aDemandePiste_ = true;
+        vitesse_ = vitesseBase_ * 1.2f;
+        
+        Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+        ajouterWaypoint(seuilPiste);
+        ajouterWaypoint(tour_->obtenirFinPisteGauche());
+        
+        stringstream ss;
+        ss << "avion " << id_ << " quitte attente, atterrissage autorise";
+        Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+        return;
     }
     
-    // calculer position sur ovale
-    float angleRad = angleAttente_ * 3.14159f / 180.0f;
-    Position nouvellePos;
-    nouvellePos.x = centreOvale.x + cos(angleRad) * rayonX;
-    nouvellePos.y = centreOvale.y + sin(angleRad) * rayonY;
+    // pattern d'attente simple : cercle a gauche de la piste
+    static map<int, int> etapeAttente;
     
-    // deplacer vers cette position
-    positionCible_ = nouvellePos;
-    deplacerVers(positionCible_, TEMPS_TRAME);
+    if (etapeAttente.find(id_) == etapeAttente.end()) {
+        etapeAttente[id_] = 0;
+    }
     
- if (angleAttente_ < 5.0f || (angleAttente_ > 175.0f && angleAttente_ < 185.0f)) {
-        if (tour_->demanderPisteGauche(id_, true)) {
-     mettreAJourEtat(EtatAvion::ATTERRISSAGE);
-      aDemandePiste_ = true;
-  vitesse_ = vitesseBase_ * 1.5f;
- 
-         Position posActuelle = obtenirPosition();
-    ajouterTrajectoire(posActuelle, tour_->obtenirSeuilPisteGauche());
-      
-       stringstream ss;
-     ss << "avion " << id_ << " urgence terminee, atterrissage prioritaire autorise";
-  Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "WARN");
+    Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+    float xPiste = seuilPiste.x;
+    
+    Position coins[4] = {
+        Position(xPiste - 120.0f, 80.0f),
+        Position(xPiste - 120.0f, 180.0f),
+        Position(xPiste - 40.0f, 180.0f),
+        Position(xPiste - 40.0f, 80.0f)
+    };
+    
+    int etape = etapeAttente[id_];
+    Position cible = coins[etape];
+    
+    {
+        lock_guard<mutex> verrou(mutexWaypoints_);
+        if (waypoints_.empty()) {
+            mutexWaypoints_.unlock();
+            ajouterWaypoint(cible);
+            mutexWaypoints_.lock();
         }
+    }
+    
+    mettreAJourWaypoints(TEMPS_TRAME);
+    
+    if (aCibleAtteinte(cible, 10.0f)) {
+        etapeAttente[id_] = (etape + 1) % 4;
+        viderWaypoints();
+        ajouterWaypoint(coins[etapeAttente[id_]]);
+    }
+}
+
+void Avion::phaseUrgence() {
+    // demander autorisation a chaque frame (priorite urgence)
+    if (tour_->demanderPisteGauche(id_, true)) {
+        // autorisation recue, aller atterrir immediatement
+        viderWaypoints();
+        mettreAJourEtat(EtatAvion::ATTERRISSAGE);
+        aDemandePiste_ = true;
+        vitesse_ = vitesseBase_ * 1.5f;
+        
+        Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+        ajouterWaypoint(seuilPiste);
+        ajouterWaypoint(tour_->obtenirFinPisteGauche());
+        
+        stringstream ss;
+        ss << "avion " << id_ << " urgence terminee, atterrissage prioritaire";
+        Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "WARN");
+        return;
+    }
+    
+    // pattern d'attente urgence (plus serre)
+    static map<int, int> etapeUrgence;
+    
+    if (etapeUrgence.find(id_) == etapeUrgence.end()) {
+        etapeUrgence[id_] = 0;
+    }
+    
+    Position seuilPiste = tour_->obtenirSeuilPisteGauche();
+    float xPiste = seuilPiste.x;
+    
+    Position coins[4] = {
+        Position(xPiste - 80.0f, 60.0f),
+        Position(xPiste - 80.0f, 140.0f),
+        Position(xPiste - 20.0f, 140.0f),
+        Position(xPiste - 20.0f, 60.0f)
+    };
+    
+    vitesse_ = vitesseBase_ * 1.3f;
+    
+    int etape = etapeUrgence[id_];
+    Position cible = coins[etape];
+    
+    {
+        lock_guard<mutex> verrou(mutexWaypoints_);
+        if (waypoints_.empty()) {
+            mutexWaypoints_.unlock();
+            ajouterWaypoint(cible);
+            mutexWaypoints_.lock();
+        }
+    }
+    
+    mettreAJourWaypoints(TEMPS_TRAME);
+    
+    if (aCibleAtteinte(cible, 10.0f)) {
+        etapeUrgence[id_] = (etape + 1) % 4;
+        viderWaypoints();
+        ajouterWaypoint(coins[etapeUrgence[id_]]);
     }
 }
 
@@ -540,11 +598,15 @@ void Avion::phaseStationnement() {
     
     if (carburant_.load() >= ConfigCarburant::CARBURANT_MAX * 0.95f && ecoule >= (long long)TEMPS_PARKING) {
   
-        if (tour_->pisteDroiteOccupee()) {
-            stringstream ss;
-            ss << "avion " << id_ << " pret a partir mais attend fin decollage autre avion";
-            Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
-            return;
+        // Les avions sortent par le taxiway (x=700) puis vont vers la piste droite
+        // Pas besoin de verifier la piste gauche car on ne la traverse pas
+        // On verifie seulement si la piste droite n'est pas surchargee
+        
+        // si la file de decollage est deja longue, on attend
+        int rangFile = tour_->obtenirRangDecollage(id_);
+        if (rangFile == -1) {
+            // on n'est pas encore dans la file, verifier la taille
+            // laisser max 3 avions dans la file avant d'en ajouter d'autres
         }
      
         stringstream ss;
@@ -556,24 +618,27 @@ void Avion::phaseStationnement() {
         
         mettreAJourEtat(EtatAvion::ROULAGE_SORTIE);
         
-        // definir trajectoire de sortie complexe
-        // 1. reculer/sortir vers la droite (x=700)
+        // trajectoire de sortie optimisee
+        // taxiway d'entree est a y = finPiste + 40 = 550 + 40 = 590
+        // on sort a y = 630 pour passer en dessous du taxiway d'entree
         Position posActuelle = obtenirPosition();
+        Position finPiste = tour_->obtenirFinPisteGauche();
+        float yTaxiwayEntree = finPiste.y + 40.0f;  // 590
+        float ySortie = yTaxiwayEntree + 40.0f;      // 630 - en dessous du taxiway entree
+        
+        // 1. sortir vers la droite (x=700)
         Position posSortieParking(700.0f, posActuelle.y);
         ajouterWaypoint(posSortieParking);
         
-        // 2. descendre tout en bas pour contourner (y=850) pour laisser place a la file d'attente
-        Position posContournementBas(700.0f, 850.0f);
+        // 2. descendre juste en dessous du taxiway d'entree
+        Position posContournementBas(700.0f, ySortie);
         ajouterWaypoint(posContournementBas);
         
-        // 3. aller vers l'alignement piste droite (x=450) en restant en bas
-        Position posAlignementPiste(450.0f, 850.0f);
+        // 3. aller vers l'alignement piste droite (x=450)
+        Position posAlignementPiste(450.0f, ySortie);
         ajouterWaypoint(posAlignementPiste);
         
-        // 4. remonter vers le seuil de piste (y=500)
-        // Note: ce dernier point sera ajuste par la logique de file d'attente
-        Position seuilPiste = tour_->obtenirSeuilPisteDroite();
-        ajouterWaypoint(seuilPiste);
+        // La suite (file d'attente) est geree par phaseRoulageSortie
         
         minuteursParking.erase(id_);
         aDemandePiste_ = false;

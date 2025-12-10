@@ -14,20 +14,20 @@ TourControle::TourControle(int nombrePlacesParking)
     , totalCrashs_(0)
 {
     // config pistes VERTICALES
-    // Piste GAUCHE (atterrissage) - x=350
-  positionPisteGauche_ = Position(350.0f, 300.0f);
-    seuilPisteGauche_ = Position(350.0f, 100.0f);      // haut de la piste
- finPisteGauche_ = Position(350.0f, 500.0f);        // bas de la piste
-    pointApproche_ = Position(350.0f, -50.0f);     // point approche en haut
+    // Piste GAUCHE (atterrissage) - x=350, dessin y=[50,550]
+    positionPisteGauche_ = Position(350.0f, 300.0f);
+    seuilPisteGauche_ = Position(350.0f, 50.0f);       // haut de la piste (debut dessin)
+    finPisteGauche_ = Position(350.0f, 550.0f);        // bas de la piste (fin dessin)
+    pointApproche_ = Position(350.0f, -50.0f);         // point approche en haut
     
-    // Piste DROITE (decollage) - x=450
+    // Piste DROITE (decollage) - x=450, dessin y=[50,550]
     positionPisteDroite_ = Position(450.0f, 300.0f);
-    seuilPisteDroite_ = Position(450.0f, 500.0f);      // debut decollage (bas)
-    finPisteDroite_ = Position(450.0f, 100.0f);        // fin decollage (haut)
-    pointDepart_ = Position(450.0f, -50.0f);        // point depart en haut
+    seuilPisteDroite_ = Position(450.0f, 550.0f);      // debut decollage (bas de la piste)
+    finPisteDroite_ = Position(450.0f, 50.0f);         // fin decollage (haut de la piste)
+    pointDepart_ = Position(450.0f, -50.0f);           // point depart en haut
     
     // point croisement horizontal entre les deux pistes
-  pointCroisement_ = Position(400.0f, 500.0f);   // en bas, entre les pistes
+    pointCroisement_ = Position(400.0f, 550.0f);       // en bas, entre les pistes
 
     // init parkings cote droit
     parkingOccupe_.resize(nombrePlacesParking, false);
@@ -52,15 +52,9 @@ bool TourControle::demanderPisteGauche(int idAvion, bool estUrgence) {
     if (pistesFermees_.load()) {
         return false;
     }
-
-    // verifier si trop d'attente au decollage (sauf urgence)
-    if (!estUrgence) {
-        lock_guard<mutex> verrouDroite(mutexPisteDroite_);
-        // si plus de 6 avions en attente, on bloque l'atterrissage
-        if (fileAttentePisteDroite_.size() >= 6) {
-            return false;
-        }
-    }
+    
+    // NOTE: on ne bloque plus les atterrissages en fonction de la file de decollage
+    // cela creait des deadlocks. La gestion du flux se fait au niveau du parking.
     
     // verif si avion deja dans la file
     priority_queue<DemandePiste> fileCopie = fileAttentePisteGauche_;

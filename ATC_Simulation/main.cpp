@@ -140,7 +140,7 @@ void dessinerLegende(RenderWindow& fenetre, const Font& police) {
 void dessinerStatistiques(RenderWindow& fenetre, const Font& police, const TourControle& tour, 
     int avionsActifs, bool pisteFermee) {
     float departX = 10.0f;
-    float departY = 550.0f;
+    float departY = 750.0f;
     
     Text texteStats(police);
  texteStats.setCharacterSize(14);
@@ -164,7 +164,7 @@ fenetre.draw(texteStats);
 // dessiner controles
 void dessinerControles(RenderWindow& fenetre, const Font& police) {
     float departX = 10.0f;
-    float departY = 570.0f;
+    float departY = 770.0f;
     
   Text texteControles(police);
     texteControles.setCharacterSize(12);
@@ -172,6 +172,96 @@ void dessinerControles(RenderWindow& fenetre, const Font& police) {
     texteControles.setString("espace spawn entree fermer piste c test crash echap quitter");
     texteControles.setPosition(Vector2f(departX, departY));
     fenetre.draw(texteControles);
+}
+
+// dessiner trajets colores
+void dessinerTrajets(RenderWindow& fenetre, const TourControle& tour) {
+    // couleurs des trajets
+    Color couleurApproche = Color(255, 255, 0, 100);      // jaune semi-transparent
+    Color couleurAtterrissage = Color(255, 0, 0, 100);    // rouge semi-transparent
+    Color couleurTaxiIn = Color(0, 255, 0, 100);          // vert semi-transparent
+    Color couleurTaxiOut = Color(255, 0, 255, 100);       // magenta semi-transparent
+    Color couleurQueue = Color(0, 255, 255, 100);         // cyan semi-transparent
+    Color couleurDecollage = Color(0, 200, 255, 100);     // bleu clair semi-transparent
+    
+    // epaisseur lignes
+    float epaisseur = 8.0f;
+    
+    // 1. trajet approche (jaune) : entree -> seuil piste gauche
+    Position pointApproche = tour.obtenirPointApproche();
+    Position seuilGauche = tour.obtenirSeuilPisteGauche();
+    {
+        RectangleShape ligne(Vector2f(seuilGauche.y - pointApproche.y, epaisseur));
+        ligne.setPosition(Vector2f(pointApproche.x - epaisseur/2, pointApproche.y));
+        ligne.setFillColor(couleurApproche);
+        fenetre.draw(ligne);
+    }
+    
+    // 2. piste atterrissage (rouge) : seuil -> fin piste gauche
+    Position finGauche = tour.obtenirFinPisteGauche();
+    {
+        RectangleShape ligne(Vector2f(finGauche.y - seuilGauche.y, epaisseur));
+        ligne.setPosition(Vector2f(seuilGauche.x - epaisseur/2, seuilGauche.y));
+        ligne.setFillColor(couleurAtterrissage);
+        fenetre.draw(ligne);
+    }
+    
+    // 3. taxiway vers parkings (vert) : fin piste -> droite vers parkings
+    {
+        // segment horizontal vers la droite
+        RectangleShape ligneH(Vector2f(650.0f - finGauche.x, epaisseur));
+        ligneH.setPosition(Vector2f(finGauche.x, finGauche.y + 40.0f - epaisseur/2));
+        ligneH.setFillColor(couleurTaxiIn);
+        fenetre.draw(ligneH);
+        
+        // segments verticaux vers chaque parking
+        for (int i = 0; i < 5; ++i) {
+            Position posParking = tour.obtenirPositionParking(i);
+            RectangleShape ligneV(Vector2f(epaisseur, abs(posParking.y - (finGauche.y + 40.0f))));
+            ligneV.setPosition(Vector2f(650.0f - epaisseur/2, min(posParking.y, finGauche.y + 40.0f)));
+            ligneV.setFillColor(couleurTaxiIn);
+            fenetre.draw(ligneV);
+        }
+    }
+    
+    // 4. taxiway sortie parkings (magenta) : parkings -> voie droite (x=700)
+    {
+        RectangleShape ligneH(Vector2f(50.0f, epaisseur));
+        ligneH.setPosition(Vector2f(650.0f, 300.0f - epaisseur/2));
+        ligneH.setFillColor(couleurTaxiOut);
+        fenetre.draw(ligneH);
+        
+        // voie verticale droite
+        RectangleShape ligneV(Vector2f(epaisseur, 400.0f));
+        ligneV.setPosition(Vector2f(700.0f - epaisseur/2, 150.0f));
+        ligneV.setFillColor(couleurTaxiOut);
+        fenetre.draw(ligneV);
+    }
+    
+    // 5. queue snake (cyan) : voie droite -> bas -> gauche -> piste decollage
+    Position seuilDroite = tour.obtenirSeuilPisteDroite();
+    {
+        // segment horizontal bas (y=700 pour laisser place a la queue)
+        RectangleShape ligneH(Vector2f(700.0f - seuilDroite.x, epaisseur));
+        ligneH.setPosition(Vector2f(seuilDroite.x, 700.0f - epaisseur/2));
+        ligneH.setFillColor(couleurQueue);
+        fenetre.draw(ligneH);
+        
+        // segment vertical gauche (queue, de y=550 a y=700)
+        RectangleShape ligneV(Vector2f(epaisseur, 700.0f - seuilDroite.y));
+        ligneV.setPosition(Vector2f(seuilDroite.x - epaisseur/2, seuilDroite.y));
+        ligneV.setFillColor(couleurQueue);
+        fenetre.draw(ligneV);
+    }
+    
+    // 6. piste decollage (bleu clair) : seuil -> fin piste droite
+    Position finDroite = tour.obtenirFinPisteDroite();
+    {
+        RectangleShape ligne(Vector2f(seuilDroite.y - finDroite.y, epaisseur));
+        ligne.setPosition(Vector2f(seuilDroite.x - epaisseur/2, finDroite.y));
+        ligne.setFillColor(couleurDecollage);
+        fenetre.draw(ligne);
+    }
 }
 
 // creer nouvel avion position aleatoire
@@ -232,7 +322,7 @@ Position pointApproche = tour->obtenirPointApproche();
 int main() {
     try {
         // init fenetre sfml
-        RenderWindow fenetre(VideoMode({800, 600}), "simulation tour controle amelioree v2");
+        RenderWindow fenetre(VideoMode({1200, 800}), "simulation tour controle amelioree v2");
      fenetre.setFramerateLimit(60);
         
         // charger police
@@ -249,8 +339,8 @@ int main() {
       spriteFond = make_unique<Sprite>(*textureFond);
   Vector2u tailleTexture = textureFond->getSize();
             if (tailleTexture.x > 0 && tailleTexture.y > 0) {
-float echelleX = 800.0f / tailleTexture.x;
-                float echelleY = 600.0f / tailleTexture.y;
+float echelleX = 1200.0f / tailleTexture.x;
+                float echelleY = 800.0f / tailleTexture.y;
       spriteFond->setScale(Vector2f(echelleX, echelleY));
           }
       }
@@ -482,16 +572,19 @@ EtatAvion etat = a->obtenirEtat();
          avions.end()
      );
             
-   /* dessiner legende
-   dessinerLegende(fenetre, police);
-     
+            // dessiner legende
+            dessinerLegende(fenetre, police);
+            
+            // dessiner trajets colores
+            dessinerTrajets(fenetre, tour);
+            
             // dessiner statistiques
-    dessinerStatistiques(fenetre, police, tour, avionsActifs, pisteFermee);
-     
+            dessinerStatistiques(fenetre, police, tour, avionsActifs, pisteFermee);
+            
             // dessiner controles
-     dessinerControles(fenetre, police);
-    */
-         fenetre.display();
+            dessinerControles(fenetre, police);
+            
+            fenetre.display();
    }
         
  // arreter proprement tous avions
