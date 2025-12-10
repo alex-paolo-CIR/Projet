@@ -5,6 +5,7 @@
 #include <vector>
 #include <atomic>
 #include <queue>
+#include <deque>
 #include <chrono>
 
 using namespace std;
@@ -44,7 +45,10 @@ public:
     bool pisteGaucheOccupee() const;
     
     // gestion piste droite decollage
-    bool demanderPisteDroite(int idAvion);
+    bool demanderPisteDroite(int idAvion); // obsolete, garder pour compatibilite
+    void rejoindreFileDecollage(int idAvion);
+    int obtenirRangDecollage(int idAvion) const;
+    bool accorderDecollage(int idAvion);
     void libererPisteDroite(int idAvion);
     bool pisteDroiteOccupee() const;
     
@@ -93,7 +97,7 @@ private:
     mutable mutex mutexPisteDroite_;
     atomic<bool> pisteDroiteOccupee_;
     int pisteDroiteOccupeePar_;
-    queue<int> fileAttentePisteDroite_;
+    deque<int> fileAttentePisteDroite_;
     
     atomic<bool> pistesFermees_;
 

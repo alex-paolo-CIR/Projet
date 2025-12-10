@@ -52,6 +52,15 @@ bool TourControle::demanderPisteGauche(int idAvion, bool estUrgence) {
     if (pistesFermees_.load()) {
         return false;
     }
+
+    // verifier si trop d'attente au decollage (sauf urgence)
+    if (!estUrgence) {
+        lock_guard<mutex> verrouDroite(mutexPisteDroite_);
+        // si plus de 6 avions en attente, on bloque l'atterrissage
+        if (fileAttentePisteDroite_.size() >= 6) {
+            return false;
+        }
+    }
     
     // verif si avion deja dans la file
     priority_queue<DemandePiste> fileCopie = fileAttentePisteGauche_;
@@ -59,7 +68,7 @@ bool TourControle::demanderPisteGauche(int idAvion, bool estUrgence) {
     
     while (!fileCopie.empty()) {
         if (fileCopie.top().idAvion == idAvion) {
-   dejaEnAttente = true;
+            dejaEnAttente = true;
             break;
         }
         fileCopie.pop();
@@ -72,7 +81,7 @@ bool TourControle::demanderPisteGauche(int idAvion, bool estUrgence) {
         stringstream ss;
         ss << "avion " << idAvion << " demande piste GAUCHE (atterrissage)" 
         << (estUrgence ? " [URGENCE]" : "");
-   Journaliseur::obtenirInstance().journaliser("Tour Controle", ss.str(), "INFO");
+        Journaliseur::obtenirInstance().journaliser("Tour Controle", ss.str(), "INFO");
     }
     
     return essayerAccorderPisteGauche(idAvion);
@@ -93,7 +102,7 @@ bool TourControle::essayerAccorderPisteGauche(int idAvion) {
     fileAttentePisteGauche_.pop();
     pisteGaucheOccupee_ = true;
     pisteGaucheOccupeePar_ = idAvion;
-  totalAtterrissages_++;
+    totalAtterrissages_++;
     
     stringstream ss;
     ss << "avion " << idAvion << " piste GAUCHE accordee (atterrissage)"
@@ -129,57 +138,63 @@ bool TourControle::pisteGaucheOccupee() const {
 
 // ========== GESTION PISTE DROITE (DECOLLAGE) ==========
 
-bool TourControle::demanderPisteDroite(int idAvion) {
+void TourControle::rejoindreFileDecollage(int idAvion) {
     lock_guard<mutex> verrou(mutexPisteDroite_);
     
-    if (pistesFermees_.load()) {
-        return false;
+    // verif si deja present
+    for (int id : fileAttentePisteDroite_) {
+        if (id == idAvion) return;
     }
     
-    // verif si deja en attente
-    queue<int> fileCopie = fileAttentePisteDroite_;
-    bool dejaEnAttente = false;
+    fileAttentePisteDroite_.push_back(idAvion);
     
-    while (!fileCopie.empty()) {
-    if (fileCopie.front() == idAvion) {
-            dejaEnAttente = true;
-     break;
-        }
-        fileCopie.pop();
-    }
- 
-    if (!dejaEnAttente) {
-    fileAttentePisteDroite_.push(idAvion);
-    
-        stringstream ss;
-        ss << "avion " << idAvion << " demande piste DROITE (decollage/croisement)";
-        Journaliseur::obtenirInstance().journaliser("Tour Controle", ss.str(), "INFO");
-    }
-    
-    return essayerAccorderPisteDroite(idAvion);
+    stringstream ss;
+    ss << "avion " << idAvion << " rejoint file attente decollage (rang " 
+       << fileAttentePisteDroite_.size() - 1 << ")";
+    Journaliseur::obtenirInstance().journaliser("Tour Controle", ss.str(), "INFO");
 }
 
-bool TourControle::essayerAccorderPisteDroite(int idAvion) {
-    if (pisteDroiteOccupee_.load() || fileAttentePisteDroite_.empty()) {
-        return false;
-    }
+int TourControle::obtenirRangDecollage(int idAvion) const {
+    lock_guard<mutex> verrou(mutexPisteDroite_);
     
-    // verif si cet avion est le prochain
- int prochainId = fileAttentePisteDroite_.front();
-    if (prochainId != idAvion) {
-        return false;
+    for (size_t i = 0; i < fileAttentePisteDroite_.size(); ++i) {
+        if (fileAttentePisteDroite_[i] == idAvion) {
+            return (int)i;
+        }
     }
+    return -1;
+}
+
+bool TourControle::accorderDecollage(int idAvion) {
+    lock_guard<mutex> verrou(mutexPisteDroite_);
     
-    // accorder piste droite
-    fileAttentePisteDroite_.pop();
+    if (pistesFermees_.load()) return false;
+    if (pisteDroiteOccupee_.load()) return false;
+    if (fileAttentePisteDroite_.empty()) return false;
+    
+    // doit etre le premier
+    if (fileAttentePisteDroite_.front() != idAvion) return false;
+    
+    // accorder
+    fileAttentePisteDroite_.pop_front();
     pisteDroiteOccupee_ = true;
     pisteDroiteOccupeePar_ = idAvion;
     
     stringstream ss;
-    ss << "avion " << idAvion << " piste DROITE accordee";
+    ss << "avion " << idAvion << " piste DROITE accordee (decollage)";
     Journaliseur::obtenirInstance().journaliser("Tour Controle", ss.str(), "INFO");
     
     return true;
+}
+
+bool TourControle::demanderPisteDroite(int idAvion) {
+    // methode compatibilite
+    rejoindreFileDecollage(idAvion);
+    return accorderDecollage(idAvion);
+}
+
+bool TourControle::essayerAccorderPisteDroite(int idAvion) {
+    return accorderDecollage(idAvion);
 }
 
 void TourControle::libererPisteDroite(int idAvion) {

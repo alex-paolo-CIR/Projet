@@ -1,4 +1,4 @@
-#include "Avion.hpp"
+Ôªø#include "Avion.hpp"
 #include <sstream>
 #include <cmath>
 #include <map>
@@ -324,7 +324,7 @@ void Avion::phaseAtterrissage() {
             Position depart = obtenirPosition();
             Position arrivee = tour_->obtenirFinPisteGauche();
 
-            // LibÈrer mutex avant d'appeler ajouterTrajectoire (qui le verrouille)
+            // Lib√©rer mutex avant d'appeler ajouterTrajectoire (qui le verrouille)
             mutexWaypoints_.unlock();
             ajouterTrajectoire(depart, arrivee);
             mutexWaypoints_.lock();
@@ -337,16 +337,16 @@ void Avion::phaseAtterrissage() {
         }
     }
 
-    // Suivre waypoints dÈfinis
+    // Suivre waypoints d√©finis
     mettreAJourWaypoints(TEMPS_TRAME);
 
     Position finPiste = tour_->obtenirFinPisteGauche();
 
-    // Si arrivÈ au bout de la piste
+    // Si arriv√© au bout de la piste
     if (aCibleAtteinte(finPiste, 10.0f)) {
         viderWaypoints();
 
-        // LibÈrer piste gauche
+        // Lib√©rer piste gauche
         if (aDemandePiste_) {
             tour_->libererPisteGauche(id_);
             aDemandePiste_ = false;
@@ -356,8 +356,47 @@ void Avion::phaseAtterrissage() {
             Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
         }
 
-        // Passer en attente croisement
-        mettreAJourEtat(EtatAvion::ATTENTE_CROISEMENT);
+        // nouvelle logique de degagement
+        // avancer de la taille de l'avion (40.0f)
+        Position posAvancee = finPiste;
+        posAvancee.y += 40.0f;
+        ajouterWaypoint(posAvancee);
+
+        // assigner parking
+        parkingAssigne_ = tour_->assignerParking(id_);
+
+        if (parkingAssigne_ >= 0) {
+            // aller vers le parking en passant par la gauche de la lignee (x=600)
+            Position posCroisementBas(600.0f, posAvancee.y); // aligne avec taxiway gauche en x, mais en bas
+            ajouterWaypoint(posCroisementBas);
+            
+            Position posParking = tour_->obtenirPositionParking(parkingAssigne_);
+            // point d'entree taxiway en face du parking
+            Position posEntreeParking(600.0f, posParking.y);
+            ajouterWaypoint(posEntreeParking);
+            
+            // entrer dans le parking
+            ajouterWaypoint(posParking);
+            
+            mettreAJourEtat(EtatAvion::ROULAGE_ENTREE);
+            
+            stringstream ss;
+            ss << "avion " << id_ << " degage vers parking " << parkingAssigne_ << " via taxiway gauche";
+            Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+        } else {
+            // pas de parking, aller vers sortie (piste droite)
+            Position posCroisementBas(450.0f, posAvancee.y); // aligne avec piste droite
+            ajouterWaypoint(posCroisementBas);
+            
+            Position seuilPiste = tour_->obtenirSeuilPisteDroite();
+            ajouterWaypoint(seuilPiste);
+            
+            mettreAJourEtat(EtatAvion::ROULAGE_SORTIE);
+            
+            stringstream ss;
+            ss << "avion " << id_ << " pas de parking, degage vers piste droite";
+            Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "WARN");
+        }
     }
 }
 
@@ -385,7 +424,7 @@ void Avion::phaseAttenteCroisement() {
 }
 
 void Avion::phaseCroisement() {
-    // DÈfinir trajectoire RECTILIGNE une seule fois
+    // D√©finir trajectoire RECTILIGNE une seule fois
     bool doitCreerTrajectoire = false;
 
     {
@@ -415,7 +454,7 @@ void Avion::phaseCroisement() {
     if (aCibleAtteinte(pointCroisement, 10.0f)) {
         viderWaypoints();
 
-        // LibÈrer piste droite
+        // Lib√©rer piste droite
         if (aDemandePiste_) {
             tour_->libererPisteDroite(id_);
             aDemandePiste_ = false;
@@ -439,9 +478,9 @@ void Avion::phaseCroisement() {
 }
 
 void Avion::phaseRoulageEntree() {
-    // *** CORRECTION : Utiliser systËme de waypoints ***
+    // *** CORRECTION : Utiliser syst√®me de waypoints ***
 
-    // DÈfinir trajectoire une seule fois
+    // D√©finir trajectoire une seule fois
     bool doitCreerTrajectoire = false;
 
     {
@@ -464,13 +503,13 @@ void Avion::phaseRoulageEntree() {
         Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
     }
 
-    // Vitesse accÈlÈrÈe
+    // Vitesse acc√©l√©r√©e
     vitesse_ = vitesseBase_ * 1.5f;
 
     // Suivre waypoints
     mettreAJourWaypoints(TEMPS_TRAME);
 
-    // VÈrifier arrivÈe parking
+    // V√©rifier arriv√©e parking
     if (parkingAssigne_ >= 0) {
         Position posParking = tour_->obtenirPositionParking(parkingAssigne_);
         if (aCibleAtteinte(posParking, 10.0f)) {
@@ -502,86 +541,115 @@ void Avion::phaseStationnement() {
     if (carburant_.load() >= ConfigCarburant::CARBURANT_MAX * 0.95f && ecoule >= (long long)TEMPS_PARKING) {
   
         if (tour_->pisteDroiteOccupee()) {
-    stringstream ss;
-  ss << "avion " << id_ << " pret a partir mais attend fin decollage autre avion";
-       Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
-    return;
-  }
+            stringstream ss;
+            ss << "avion " << id_ << " pret a partir mais attend fin decollage autre avion";
+            Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+            return;
+        }
      
-   stringstream ss;
+        stringstream ss;
         ss << "avion " << id_ << " ravitaille " << carburant_.load() 
            << " apres " << ecoule << " sec - pret au depart";
-     Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+        Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
         
         tour_->libererParking(id_, parkingAssigne_);
         
         mettreAJourEtat(EtatAvion::ROULAGE_SORTIE);
-  positionCible_ = tour_->obtenirSeuilPisteDroite();
+        
+        // definir trajectoire de sortie complexe
+        // 1. reculer/sortir vers la droite (x=700)
+        Position posActuelle = obtenirPosition();
+        Position posSortieParking(700.0f, posActuelle.y);
+        ajouterWaypoint(posSortieParking);
+        
+        // 2. descendre tout en bas pour contourner (y=850) pour laisser place a la file d'attente
+        Position posContournementBas(700.0f, 850.0f);
+        ajouterWaypoint(posContournementBas);
+        
+        // 3. aller vers l'alignement piste droite (x=450) en restant en bas
+        Position posAlignementPiste(450.0f, 850.0f);
+        ajouterWaypoint(posAlignementPiste);
+        
+        // 4. remonter vers le seuil de piste (y=500)
+        // Note: ce dernier point sera ajuste par la logique de file d'attente
+        Position seuilPiste = tour_->obtenirSeuilPisteDroite();
+        ajouterWaypoint(seuilPiste);
         
         minuteursParking.erase(id_);
-      aDemandePiste_ = false;
+        aDemandePiste_ = false;
     }
 }
+
 void Avion::phaseRoulageSortie() {
-    // *** CORRECTION : Utiliser systËme de waypoints ***
-
-    // DÈfinir trajectoire une seule fois
-    bool doitCreerTrajectoire = false;
-
-    {
-        lock_guard<mutex> verrou(mutexWaypoints_);
-        if (waypoints_.empty()) {
-            doitCreerTrajectoire = true;
-        }
-    }
-
-    if (doitCreerTrajectoire) {
-        Position depart = obtenirPosition();
-        Position arrivee = tour_->obtenirSeuilPisteDroite();
-
-        ajouterTrajectoire(depart, arrivee);
-
-        stringstream ss;
-        ss << "avion " << id_ << " roulage sortie vers piste droite de ("
-            << depart.x << "," << depart.y << ") vers ("
-            << arrivee.x << "," << arrivee.y << ")";
-        Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
-    }
-
-    // Vitesse accÈlÈrÈe
+    // rejoindre la file d'attente (si pas deja fait)
+    tour_->rejoindreFileDecollage(id_);
+    
+    // obtenir rang dans la file
+    int rang = tour_->obtenirRangDecollage(id_);
+    
+    if (rang == -1) return;
+    
+    // Vitesse acc√©l√©r√©e
     vitesse_ = vitesseBase_ * 1.5f;
 
-    // Suivre waypoints
-    mettreAJourWaypoints(TEMPS_TRAME);
+    // Verifier si on est aligne avec la piste (x=450)
+    Position posActuelle = obtenirPosition();
+    bool aligne = abs(posActuelle.x - 450.0f) < 10.0f;
 
-    // VÈrifier arrivÈe seuil piste droite
-    Position seuilPiste = tour_->obtenirSeuilPisteDroite();
-    if (aCibleAtteinte(seuilPiste, 10.0f)) {
-        viderWaypoints();
-
-        // Demander autorisation dÈcollage
-        if (!aDemandePiste_) {
-            if (tour_->demanderPisteDroite(id_)) {
-                // Autorisation accordÈe
-                mettreAJourEtat(EtatAvion::DECOLLAGE);
-                aDemandePiste_ = true;
-
-                // DÈfinir trajectoire dÈcollage
-                Position posActuelle = obtenirPosition();
-                ajouterTrajectoire(posActuelle, tour_->obtenirPointDepart());
-
-                stringstream ss;
-                ss << "avion " << id_ << " autorisation decollage accordee";
-                Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+    if (aligne) {
+        // on est dans la file d'attente (axe vertical)
+        
+        // calculer position cible selon rang
+        Position seuilPiste = tour_->obtenirSeuilPisteDroite();
+        Position cibleAttente = seuilPiste;
+        cibleAttente.y += rang * 60.0f;
+        
+        // verifier si le prochain waypoint correspond a notre cible
+        // sinon on met a jour la trajectoire
+        bool trajectoireAJour = false;
+        {
+            lock_guard<mutex> verrou(mutexWaypoints_);
+            if (!waypoints_.empty()) {
+                Position dernier = waypoints_.back();
+                if (abs(dernier.y - cibleAttente.y) < 1.0f) {
+                    trajectoireAJour = true;
+                }
+            }
+        }
+        
+        if (!trajectoireAJour) {
+            // redefinir trajectoire vers la cible d'attente
+            viderWaypoints();
+            ajouterTrajectoire(posActuelle, cibleAttente);
+        }
+        
+        // si on est arrive a la position d'attente
+        if (aCibleAtteinte(cibleAttente, 5.0f)) {
+            // si on est premier (rang 0), on tente de decoller
+            if (rang == 0) {
+                if (tour_->accorderDecollage(id_)) {
+                    mettreAJourEtat(EtatAvion::DECOLLAGE);
+                    aDemandePiste_ = true;
+                    
+                    // definir trajectoire decollage
+                    ajouterTrajectoire(posActuelle, tour_->obtenirPointDepart());
+                    
+                    stringstream ss;
+                    ss << "avion " << id_ << " autorisation decollage accordee";
+                    Journaliseur::obtenirInstance().journaliser("Avion", ss.str(), "INFO");
+                }
             }
         }
     }
+    
+    // Suivre waypoints (contournement ou file d'attente)
+    mettreAJourWaypoints(TEMPS_TRAME);
 }
 
 void Avion::phaseDecollage() {
     
 
-    // DÈfinir trajectoire une seule fois
+    // D√©finir trajectoire une seule fois
     bool doitCreerTrajectoire = false;
 
     {
@@ -610,22 +678,22 @@ void Avion::phaseDecollage() {
     // Suivre waypoints
     mettreAJourWaypoints(TEMPS_TRAME);
 
-    // VÈrifier fin dÈcollage
+    // V√©rifier fin d√©collage
     Position pointDepart = tour_->obtenirPointDepart();
     if (aCibleAtteinte(pointDepart, 10.0f)) {
         viderWaypoints();
 
-        // LibÈrer piste DROITE immÈdiatement
+        // Lib√©rer piste DROITE imm√©diatement
         tour_->libererPisteDroite(id_);
         aDemandePiste_ = false;
 
-        // RÈinitialiser vitesse normale
+        // R√©initialiser vitesse normale
         vitesse_ = vitesseBase_;
 
-        // Continuer vers le haut pour sortir de l'Ècran
+        // Continuer vers le haut pour sortir de l'√©cran
         mettreAJourEtat(EtatAvion::DEPART);
 
-        // DÈfinir point de sortie trËs haut
+        // D√©finir point de sortie tr√®s haut
         Position posActuelle = obtenirPosition();
         Position sortieEcran(posActuelle.x, -200.0f);  // Sortir par le haut
         ajouterTrajectoire(posActuelle, sortieEcran);
@@ -637,9 +705,9 @@ void Avion::phaseDecollage() {
 }
 
 void Avion::phaseDepart() {
-    // *** CORRECTION : Utiliser systËme de waypoints ***
+    // *** CORRECTION : Utiliser syst√®me de waypoints ***
 
-    // DÈfinir trajectoire sortie une seule fois
+    // D√©finir trajectoire sortie une seule fois
     bool doitCreerTrajectoire = false;
 
     {
@@ -663,7 +731,7 @@ void Avion::phaseDepart() {
     // Suivre waypoints
     mettreAJourWaypoints(TEMPS_TRAME);
 
-    // VÈrifier si hors Ècran
+    // V√©rifier si hors √©cran
     Position posActuelle = obtenirPosition();
     if (posActuelle.y < -150.0f || posActuelle.y > 750.0f ||
         posActuelle.x < -150.0f || posActuelle.x > 950.0f) {
@@ -721,7 +789,7 @@ bool Avion::aCibleAtteinte(const Position& cible, float seuil) const {
 }
 
 
-// dÈfinition des waypoints
+// d√©finition des waypoints
 
 void Avion::ajouterWaypoint(const Position& waypoint) {
     lock_guard<mutex> verrou(mutexWaypoints_);

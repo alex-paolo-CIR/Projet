@@ -241,7 +241,7 @@ int main() {
         // charger ressources graphiques
         GestionnaireRessources& gestionnaireRes = GestionnaireRessources::obtenirInstance();
       const Texture* textureAvion = gestionnaireRes.chargerTexture(CHEMIN_IMG + "avion.png");
-        const Texture* textureFond = gestionnaireRes.chargerTexture(CHEMIN_IMG + "fond.png");
+        const Texture* textureFond = gestionnaireRes.chargerTexture(CHEMIN_IMG + "casis.png");
 
         // sprite fond
         unique_ptr<Sprite> spriteFond;
