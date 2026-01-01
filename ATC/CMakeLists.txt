@@ -5,9 +5,9 @@ project(ATC VERSION 1.0.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(SFML_DIR "${CMAKE_SOURCE_DIR}/SFML_3.0.2/lib/cmake/SFML")
+set(SFML_DIR "C:/Program Files/SFML_3.0.2/lib/cmake/SFML")
 
-list(APPEND CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/SFML_3.0.2")
+list(APPEND CMAKE_PREFIX_PATH "C:/Program Files/SFML_3.0.2")
 
 set(SFML_STATIC_LIBRARIES TRUE)
 
@@ -30,5 +30,4 @@ add_custom_command(TARGET ATC POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${CMAKE_CURRENT_SOURCE_DIR}/assets"
         "$<TARGET_FILE_DIR:ATC>/assets"
-    COMMENT "Copie des assets vers le dossier de build..."
 )
