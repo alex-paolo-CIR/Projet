@@ -5,9 +5,6 @@
 
 using namespace std;
 
-// constantes du jeu
-// pas de majuscules pas d accent pas de ponctuation
-
 namespace constantes {
     constexpr float pi = numbers::pi_v<float>;
 
